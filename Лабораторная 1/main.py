@@ -41,7 +41,7 @@ class Point2D:
         out_point = (self.X, self.Y)
         return out_point
 
-    def mult_point_by_num(self, a_x: Union[float, int, complex], b_y: Union[float, int, complex]) -> tuple:
+    def mult_point_by_num(self, a_x: Union[float, int], b_y: Union[float, int]) -> tuple:
         """
         Multiplies the x and y coordinates of a point by two numbers
         :param a_x: The number by which the X coordinate is multiplied
@@ -52,10 +52,10 @@ class Point2D:
         >>> point.mult_point_by_num(2, 2) == (2, 4)
         True
         """
-        if not isinstance(a_x, (int, float, complex)):
+        if not isinstance(a_x, (int, float)):
             raise TypeError(f"x - {a_x} must be int or float")
 
-        if not isinstance(b_y, (int, float, complex)):
+        if not isinstance(b_y, (int, float)):
             raise TypeError(f"y - {b_y} must be int or float")
 
         out_mult_point = (self.X * a_x, self.Y * b_y)
