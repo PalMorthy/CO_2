@@ -44,11 +44,11 @@ class Student(Person):
 
     def __repr__(self):
         """
-        The method returns a string indicating how can an instance of the Person class be initialized
-        :return: a string indicating how an instance of the Person class can be initialized
+        The method returns a string indicating how can an instance of the Student class be initialized
+        :return: a string indicating how an instance of the Student class can be initialized
         """
         return f"{self.__class__.__name__}(name={self.name!r}, age={self.age!r}, gender={self.gender!r}, " \
-               f"university:{self.university!r}"
+               f"university={self.university!r}"
 
 
 if __name__ == "__main__":
