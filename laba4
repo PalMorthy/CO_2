@@ -1,0 +1,56 @@
+
+
+class Person:
+    """
+    Class describing a person
+    """
+    def __init__(self, name: str, age: int, gender: str):
+        self.age = age
+        self.gender = gender
+        self.name = name
+
+    def __str__(self) -> str:
+        """
+        Returns the name of a person
+        :return: name
+        """
+        return f"Name-{self.name}"
+
+    def __repr__(self) -> str:
+        """
+        The method returns a string indicating how can an instance of the Person class be initialized
+        :return: a string indicating how an instance of the Person class can be initialized
+        """
+        return f"{self.__class__.__name__}(name={self.name!r}, age={self.age!r}, gender={self.gender!r}"
+
+    def can_buy_beer(self) -> bool:
+        """
+        The method checks whether a person is an adult
+        :return: True if over 18 years old, otherwise return False
+        """
+        if self.age >= 18:
+            return True
+        else:
+            return False
+
+
+class Student(Person):
+    """
+    Class describing a student
+    """
+    def __init__(self, name: str, age: int, gender: str, university: str):
+        super().__init__(name, age, gender)
+        self.university = university
+
+    def __repr__(self):
+        """
+        The method returns a string indicating how can an instance of the Student class be initialized
+        :return: a string indicating how an instance of the Student class can be initialized
+        """
+        return f"{self.__class__.__name__}(name={self.name!r}, age={self.age!r}, gender={self.gender!r}, " \
+               f"university={self.university!r}"
+
+
+if __name__ == "__main__":
+    pass
+
